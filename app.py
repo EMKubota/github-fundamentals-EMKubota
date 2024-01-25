@@ -48,7 +48,8 @@ def delete(todo_id):
 @app.route("/note")
 def note_page():
     note = Todo.query.all()
-    return render_template("note.html", note=note)
+    category = Todo.query.all()
+    return render_template("note.html", note=note, category=category)
 
 
 
